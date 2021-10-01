@@ -18,3 +18,8 @@ class BaseHelpers:
     def find_by_contains_text(self, text, element_tag="*"):
         """Find element using XPATH contains function by text"""
         return self.wait_until_element_find(By.XPATH, f".//{element_tag}[contains(text(), '{text}')]")
+
+    def wait_and_click(self, locator_type, locator):
+        """Wait until element clickable and click"""
+        self.wait.until(EC.element_to_be_clickable((locator_type, locator)))
+        self.driver.find_element(by=locator_type, value=locator).click()
