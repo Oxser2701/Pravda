@@ -1,4 +1,4 @@
-import logging
+
 
 from selenium.webdriver.common.by import By
 
@@ -16,10 +16,6 @@ class PravdaLocators:
 
 class StartPages(BaseHelpers):
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.log = logging.getLogger(__name__)
-
     def open_news(self):
         self.driver.wait_and_click(By.XPATH, PravdaLocators.SIDE_MENU_XPATH)
         self.driver.wait_and_click(By.XPATH, PravdaLocators.SECTIONS_XPATH)
@@ -28,10 +24,6 @@ class StartPages(BaseHelpers):
 
 
 class NewsPages(BaseHelpers):
-
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.log = logging.getLogger(__name__)
 
     def verify_title(self):
         self.wait_until_element_find(By.XPATH, PravdaLocators.POST_TITLE_XPATH)
