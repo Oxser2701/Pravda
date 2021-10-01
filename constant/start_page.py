@@ -6,5 +6,5 @@ class StartPageConstants:
     # Sections
     SECTIONS_XPATH = ".//a[@href='/news/']"
     # News
-    NEWS_XPATH = ".//a[@href='/news/2021/09/30/7308979/']"
-    NEWS_TEXT_XPATH = 'На полігоні під Києвом загинув 24-річний боєць Нацгвардії'
+    NEWS_XPATH = ".//a[@href='/news/2021/10/1/7309026/']"
+    NEWS_TEXT_XPATH = 'Посли G7 закликали Раду суддів якнайшвидше оголосити кандидатів до Етичної ради'
